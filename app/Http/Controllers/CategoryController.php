@@ -104,7 +104,7 @@ class CategoryController extends Controller
         $input = $request->all();
 
         if ($request->has('gambar')) {
-            File::delete('uploads/' . $category->gambar);
+            File::delete('uploads/gambarKategori/' . $category->gambar);
             $gambar = $request->file('gambar');
             $nama_gambar = time() . rand(1, 9) . '.' . $gambar->getClientOriginalExtension();
             $gambar->move('uploads/gambarKategori', $nama_gambar);
