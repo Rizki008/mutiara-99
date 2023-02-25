@@ -71,7 +71,9 @@ class OrderController extends Controller
      */
     public function show(Order $order)
     {
-        //
+        return response()->json([
+            'data'=>$order
+        ]);
     }
 
     /**
