@@ -9,6 +9,7 @@ use App\Http\Controllers\MemberController;
 use App\Http\Controllers\TestimoniController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\ReportController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -39,4 +40,6 @@ Route::group([
     Route::get('order/diterima', [OrderController::class, 'diterima']);
     Route::get('order/selesai', [OrderController::class, 'selesai']);
     Route::get('order/ubah_status/{order}', [OrderController::class, 'ubah_status']);
+
+    Route::get('reports', [ReportController::class, 'index']);
 });
